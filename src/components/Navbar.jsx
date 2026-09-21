@@ -5,7 +5,7 @@ import menu from "../assets/images/menu.png";
 import Divider from "./Divider";
 import { FiUser, FiChevronRight, FiX } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
-import Login from "../modalWindow/login";
+import Login from "../modalWindow/Login";
 import { useState } from "react";
 
 function Navbar() {
