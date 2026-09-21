@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FF1744;
+  --color-secondary: #fff
+}
+
+@keyframes lionGlow {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 40px rgba(255, 23, 68, 0.5))
+      drop-shadow(0 0 80px rgba(255, 23, 68, 0.3));
+  }
+
+  50% {
+    filter:
+      drop-shadow(0 0 70px rgba(255, 23, 68, 0.8))
+      drop-shadow(0 0 120px rgba(255, 23, 68, 0.5));
+  }
+}
+
+.animate-lionGlow {
+  animation: lionGlow 4s ease-in-out infinite;
+}
+
+
+@keyframes lionGlow2 {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 40px rgba(255, 23, 68, 0.1))
+      drop-shadow(0 0 80px rgba(255, 23, 68, 0.2));
+  }
+
+  50% {
+    filter:
+      drop-shadow(0 0 70px rgba(255, 23, 68, 0.1))
+      drop-shadow(0 0 120px rgba(255, 23, 68, 0.2));
+  }
+}
+
+.animate-lionGlow2 {
+  animation: lionGlow2 4s ease-in-out infinite;
+}
+
+
+.image-fade {
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      var(--color-primary) 30%,
+      black 85%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to right,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%
+    );
+
+  -webkit-mask-composite: source-in;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      var(--color-primary) 30%,
+      black 85%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to right,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%
+    );
+
+  mask-composite: intersect;
+}
+
+
+.image-fade-horizontal {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 95%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 95%,
+    transparent 100%
+  );
+}
+
+
+
+
+
+
+
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: black;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(87, 13, 13);
+}
